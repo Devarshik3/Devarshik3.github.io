@@ -33,14 +33,14 @@
             your travel experience, including car booking, driver booking, and hotel booking, 
             all aimed at providing you with the utmost convenience and peace of mind during your travels.
           </p>
-          <button class="scrlbtn">Read more</button>
+          <button class="scrlbtn" onclick="scrollToOurService()">Read more</button>
         </div>
       </div>
     </header>
 
     <section class="journey__container">
       <div class="section__container">
-        <h2 class="section__title"><b>Our Services</b></h2><br>
+        <h2 class="section__title" id="our-service"><b>Our Services</b></h2><br>
         <div class="journey__grid">
 
           <div class="card1">
@@ -150,6 +150,13 @@
         </p>
       </div>
     </footer>
-
+    <script>
+      function scrollToOurService() {
+          var element = document.getElementById("our-service");
+          if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+          }
+      }
+  </script>
   </body>
 </html>
