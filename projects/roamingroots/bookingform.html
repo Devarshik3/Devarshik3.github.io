@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BookingForm</title>
+        <link rel="stylesheet" href="styles3.css">
+        <link rel="stylesheet" href="styles.css">    
+    </head>
+    <body>
+        <nav>
+            <div class="nav__logo"><a href="index.html">Roaming Roots</a></div>
+            <ul class="nav__links">
+              <a href="index.html"><li class="link">Home</li></a>
+              <a href="gallery.html"></a><li class="link">Gallery</li></a>
+              <a href="about us.html"> <li class="link">About Us</li></a>
+                <a href="contactform.html"><li class="link">Contact Us</li></a>
+            </ul>
+          </nav><br><br><br><br><br><br>
+
+          <div class="container">
+            <h1>Booking Form</h1>
+            <form method="post" action="booking1.php">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">City: </label>
+                    <select id="city" name="city">
+                        <option value="ahd">Ahmedabad</option>
+                        <option value="rajkot">rajkot</option>
+                        <option value="srt">Surat</option>
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="jaipur">jaipur</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup">Pick Up Point:</label>
+                    <input type="text" id="pickup" name="pickup" required>
+                </div>
+                <div class="form-group">
+                    <label for="drop">Drop Point:</label>
+                    <input type="text" id="drop" name="drop" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-time">Pick Up Time:</label>
+                    <input type="time" id="pickup-time" name="time" required>
+                </div>  
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

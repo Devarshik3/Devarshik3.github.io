@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__logo"><a href="#"><b>Roaming Roots</b></a></div>
+        <ul class="nav__links">
+          <a href="index.html"><li class="link">Home</li></a>
+          <a href="gallery.html"><li class="link">Gallery</li></a>
+          <a href="about us.html"><li class="link">About Us</li></a>
+          <a href="contactform.html"><li class="link">Contact Us</li></a>
+        </ul>
+      </nav>
+    <div class="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <div class="contact-details">
+                    <h1>Details</h1><br>
+                    <p>roamingroots@gmail.com</p><br>
+                    <p>+919825944320</p><br>                 
+                    <p>@roaming_roots</p>
+                </div>
+                <div class="contact-form">
+                    <form method="post" onsubmit="sendEmail(); reset(); return false;" action="contact.php">
+                        <span>Contact US</span>
+                        <input type="text" placeholder="FullName" name="uname">
+                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="PhoneNumber" name="phonenum">
+                        <textarea placeholder="Enter Message"></textarea>
+                        <input type="submit" value="Send" class="btn">
+                    </form>
+                </div>
+
+                <script src="https://smtpjs.com/v3/smtp.js"></script>
+                <script>
+                    function sendEmail(){
+                        Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "devarshikashiwala31@gmail.com" ,
+                        Password :  "debu@9825944320" ,
+                        To : 'devarshikashiwala.21.cs@iite.indusuni.ac.in',
+                        From : document.getElementById("email").value,
+                        Subject : " New contact form Enquiry",
+                        Body : "And this is the body"
+                  }).then(
+                    message => alert(message)
+                  );
+                    }
+                </script>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
